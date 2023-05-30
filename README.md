@@ -10,4 +10,4 @@ Instalação:
 
   Clonando o projeto: *git clone --recurse-submodules --remote-submodules URL* 
   
-  Baixando as imagens e subindo o docker: *docker compose -f jhipster-registry.yml -f kafka.yml -f postgresql.yml -f redis.yml up -d*
+  Baixando as imagens e subindo o docker: *docker compose -f elasticsearch.yml -f jhipster-registry.yml -f kafka.yml -f postgresql.yml -f redis.yml up -d*
