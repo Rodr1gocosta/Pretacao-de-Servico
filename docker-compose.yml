@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  postgresql-db-order:
+    extends:
+      file: Order/src/main/docker/postgresql.yml
+      service: order-postgresql
+    container_name: order-postgresql
+  elasticsearch:
+    extends:
+      file: Docker/elasticsearch.yml
+      service: elasticsearch-prestacaodeservico
+    container_name: elasticsearch-prestacaodeservico
+  zookeeper:
+    extends:
+      file: Docker/zookeeper.yml
+      service: zookeeper-prestacaodeservico
+    container_name: zookeeper-prestacaodeservico
+  kafka:
+    extends:
+      file: Docker/kafka.yml
+      service: kafka-prestacaodeservico
+    container_name: kafka-prestacaodeservico
+  redis:
+    extends:
+      file: Docker/redis.yml
+      service: redis-prestacaodeservico
+    container_name: redis-prestacaodeservico
+  jhipster-control-center:
+    extends:
+      file: Gateway/src/main/docker/jhipster-control-center.yml
+      service: jhipster-control-center
+    container_name: jhipster-control-center
+  jhipster-registry:
+    extends:
+      file: Gateway/src/main/docker/jhipster-registry.yml
+      service: jhipster-registry
+    container_name: jhipster-registry
