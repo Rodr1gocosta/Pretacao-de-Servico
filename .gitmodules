@@ -4,3 +4,6 @@
 [submodule "Gateway"]
 	path = Gateway
 	url = https://github.com/Rodr1gocosta/Gateway.git
+[submodule "front-end-prestacao-de-servico"]
+	path = front-end-prestacao-de-servico
+	url = https://github.com/Rodr1gocosta/front-end-prestacao-de-servico.git
