@@ -10,9 +10,11 @@ pipeline {
                 // Checkout dos repositórios
                 dir('Gateway') {
                     checkout scm
+                    sh 'git submodule update --init --recursive'
                 }
                 dir('front-end-prestacao-de-servico') {
                     checkout scm
+                    sh 'git submodule update --init --recursive'
                 }
             }
         }
