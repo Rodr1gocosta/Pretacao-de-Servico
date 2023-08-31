@@ -32,6 +32,7 @@ pipeline {
         stage('Build Gateway') {
             steps {
                 dir('Gateway') {
+                    sh 'mvn clean'
                     sh 'mvn clean package'
                 }
             }
