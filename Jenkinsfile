@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools {
         nodejs "Node v14.20"
+        maven "Maven"
     }
     environment {
             DOCKER_IMAGE_GATEWAY = "rodr1gocosta/gateway-image"
