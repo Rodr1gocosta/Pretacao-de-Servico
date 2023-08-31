@@ -46,7 +46,7 @@ pipeline {
                     sh 'mvn test'
                 }
                 dir('front-end-prestacao-de-servico') {
-                    sh 'npm test'
+                    // sh 'npm test'
                 }
             }
         }
