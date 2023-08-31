@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs "Node14.20"
+        nodejs "Node v14.20"
     }
     environment {
             DOCKER_IMAGE_GATEWAY = "rodr1gocosta/gateway-image"
