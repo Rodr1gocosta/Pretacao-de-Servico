@@ -1,7 +1,6 @@
 pipeline {
     agent any
     tools {
-        jdk "Java v11"
         nodejs "Node v14.20"
         maven "Maven"
     }
