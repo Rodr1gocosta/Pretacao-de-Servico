@@ -58,8 +58,19 @@ pipeline {
                         dockerapp = docker.build("${DOCKER_IMAGE_GATEWAY}:${env.BUILD_ID}", '-f Dockerfile .')
                     }
                     dir('front-end-prestacao-de-servico') {
-                        dockerapp = docker.build("${DOCKER_IMAGE_FRONTEND}:${env.BUILD_ID}", '-f Dockerfile .')
+                        dockerapp1 = docker.build("${DOCKER_IMAGE_FRONTEND}:${env.BUILD_ID}", '-f Dockerfile .')
                     }
+                }
+            }
+        }
+        stage('Enviar imagem Docker Hub') {
+            steps {
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                        dockerapp.push("${env.BUILD_ID}")
+                        dockerapp1.push("${env.BUILD_ID}")
+                    }
+                    
                 }
             }
         }
